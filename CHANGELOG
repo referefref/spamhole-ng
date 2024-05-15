@@ -1,0 +1,35 @@
+2024.15.05 Released as spamhole-ng
+    Rewrote sections of spamhole.c for safety and compilation on modern GCC.
+
+2003.12.10	Released as version 0.5.
+
+		Essentially re-wrote most of the source to remove the option
+		to allow connection passthrough to a real smtp server and
+		added a lightweight smtp server emulator.
+
+		Moved the initialization code to an init() subroutine.
+
+		Moved the configuration options to config.h
+
+2003.12.09	Released as version 0.4.
+
+		Added creation of working dir if it does not exist upon
+		startup.
+
+		Applied patch from Kees Cook @ Open Source Development Lab
+		<kees@osdl.org> which added support for binding to a defined
+		network address as well as cleaned up the compiler warnings.
+
+		John Delisle <John_Delisle@ceridian.ca> contributed a startup
+		script for RedHat-ish distro users.  It can be found in the
+		'contrib' directory.
+
+2003.12.08	Released as version 0.3.
+
+		Moved decision to spamhole messages outside the check for
+		previous connections.  Previously, the first connection
+		which initialized the counter would always pass the connection
+		without modification even if the threshold was set to 0.
+
+2003.12.04	Fixed counter reset bug.  Counter no longer resets at 100.
+
